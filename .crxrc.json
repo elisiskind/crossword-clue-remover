@@ -1,0 +1,36 @@
+{
+  "entryPoints": {
+    "contentScripts": [
+      {
+        "matches": [
+          "https://*.nytimes.com/*"
+        ],
+        "location": "content/index.ts",
+        "staticDir": "static"
+      }
+    ],
+    "popup": "popup/index.tsx"
+  },
+  "buildOptions": {
+    "fontExtensions": [
+      "ttf"
+    ],
+    "outputDir": "dist",
+    "sourceRoot": "src"
+  },
+  "manifest": {
+    "name": "NYTimes Crossword Clue Remover",
+    "description": "Your description goes here",
+    "version": "0.0.1",
+    "version_name": "Development build",
+    "manifest_version": 3,
+    "permissions": [
+      "storage",
+      "tabs",
+      "scripting"
+    ],
+    "host_permissions": [
+      "https://*.nytimes.com/*"
+    ]
+  }
+}
